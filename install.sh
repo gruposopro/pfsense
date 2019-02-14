@@ -10,7 +10,7 @@ env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-openvpn-client-export
 env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-Lightsquid 
 env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-Service_Watchdog
 
-axel http://cloud.gruposopro.com.br:5850/sharing/KKJou4gM0
+axel https://raw.githubusercontent.com/arielvitoria155/pfsense/master/sgerror.php
 
 cp sgerror.php /usr/local/www
 
