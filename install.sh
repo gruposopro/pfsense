@@ -8,6 +8,7 @@ env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-openvpn-client-export
 env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-Lightsquid 
 env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-Service_Watchdog
 
+wget https://raw.githubusercontent.com/arielvitoria155/pfsense/master/config-GSF-ALTERAR.alterar.local-20190215142949.xml
+cp config-GSF-ALTERAR.alterar.local-20190215142949.xml /conf/config.xml
 wget https://raw.githubusercontent.com/arielvitoria155/pfsense/master/sgerror.php
-
-cp sgerror.php /usr/local/www
+cp sgerror.php /usr/local/www/sgerror.php
