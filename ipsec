@@ -1,14 +1,14 @@
 env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-sudo
 wget https://raw.githubusercontent.com/arielvitoria155/pfsense/master/zabbix_sudoers
-cp zabbix_sudoers /usr/local/etc/sudoers.d
+mv zabbix_sudoers /usr/local/etc/sudoers.d
 
 wget https://raw.githubusercontent.com/arielvitoria155/pfsense/master/check_ipsec.sh
 wget https://raw.githubusercontent.com/arielvitoria155/pfsense/master/check_ipsec_traffic.sh
 wget https://raw.githubusercontent.com/arielvitoria155/pfsense/master/zabbix-ipsec.py
 
-cp zabbix-ipsec.py /usr/local/bin/zabbix-ipsec.py
-cp check_ipsec_traffic.sh /usr/local/bin/check_ipsec_traffic.sh
-cp check_ipsec.sh /usr/local/bin/check_ipsec.sh
+mv zabbix-ipsec.py /usr/local/bin/zabbix-ipsec.py
+mv check_ipsec_traffic.sh /usr/local/bin/check_ipsec_traffic.sh
+mv check_ipsec.sh /usr/local/bin/check_ipsec.sh
 
 chmod +x /usr/local/bin/zabbix-ipsec.py
 chmod +x /usr/local/bin/check_ipsec.sh 
