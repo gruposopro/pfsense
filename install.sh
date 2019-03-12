@@ -7,9 +7,11 @@ env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-zabbix-proxy34
 env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-openvpn-client-export
 env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-Lightsquid 
 env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-Service_Watchdog
+env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-snort
 
-wget https://raw.githubusercontent.com/arielvitoria155/pfsense/master/backup_padrao.xml
-cp backup_padrao.xml /conf/config.xml
+
+#wget https://raw.githubusercontent.com/arielvitoria155/pfsense/master/backup_padrao.xml
+#cp backup_padrao.xml /conf/config.xml
 wget https://raw.githubusercontent.com/arielvitoria155/pfsense/master/sgerror.php
 cp sgerror.php /usr/local/www/sgerror.php
 
