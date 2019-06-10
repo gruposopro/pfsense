@@ -14,5 +14,6 @@ env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-snort
 #cp backup_padrao.xml /conf/config.xml
 wget https://raw.githubusercontent.com/arielvitoria155/pfsense/master/sgerror.php
 cp sgerror.php /usr/local/www/sgerror.php
+rm -f sgerror.php
 
-echo "kern.vty = "sc"" >> /boot/loader.conf
+#echo "kern.vty = "sc"" >> /boot/loader.conf
