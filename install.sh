@@ -1,4 +1,4 @@
-pkg add http://pkg.freebsd.org/FreeBSD:11:amd64/latest/All/wget-1.20_2.txz
+pkg add http://pkg.freebsd.org/FreeBSD:11:amd64/latest/All/wget-1.20.3.txz
 env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-squid
 env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-squidguard
 env ASSUME_ALWAYS_YES=YES pkg install pfsense-pkg-cron
