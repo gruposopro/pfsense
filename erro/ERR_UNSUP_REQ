@@ -1,38 +1,38 @@
-
-<html><head>
+<html>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
+<head>
 <meta type="copyright" content="Copyright (C) 1996-2017 The Squid Software Foundation and contributors">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>ERRO: A URL requisitada não pode ser recuperada</title>
-<style type="text/css"><!-- 
- %l
-
-body
-:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }
-:lang(he) { direction: rtl; }
- --></style>
+<title>Erro</title>
+<style>
+        body  {
+          background-image: url("https://i.imgur.com/NCJ6Xz9.jpg");
+          background-color: #cccccc;
+          background-repeat: no-repeat;
+          background-position: 60% 10%;
+          background-size: 100%, 95%, 35%;
+        }
+        </style>
 </head><body id="%c">
 <div id="titles">
-<h1>ERRO</h1>
-<h2>A URL requisitada não pôde ser recuperada</h2>
-</div>
-<hr>
-
-<div id="content">
-<p>O seguinte erro foi encontrado ao tentar recuperar a URL: <a href="%U">%U</a></p>
-
-<blockquote id="error">
-<p><b>Método e Protocolo de Requisição Não-Suportado</b></p>
+<div class="jumbotron">
+  <h1 class="display-4">Erro!</h1>
+  <p class="lead">Erro ao tentar acessar a pagina : <a href="%U">%U</a></p>
+  <hr class="my-4">
+  <blockquote id="error">
+<p>Informe o seguinte erro ao técnico no chat: <a>%c</a></p>
 </blockquote>
-
-<p>Squid não suporta todos os métodos de requisição para todos os protocolos de acesso. Por exemplo, você não pode emitir uma requisição POST ao protocolo Gopher.</p>
-
-<p>Seu administrador do cache é <a href="mailto:%w%W">%w</a>.</p>
+<a href="%U" type="button" class="btn btn-primary">Recarregar Pagina  <i class="fa fa-refresh" aria-hidden="true"></i></a>
+<a  type="button" class="btn btn-outline-secondary" href="#"
+ onclick="window.open('https://chat.widget.milvus.com.br/#/user-identification?token=WRR6BBI5OHRBL2DQTXDR7AP1VDVCXD9IXBIRB4V16BLRAL6YI6CM28I4BCUYJCJTT3P62ZD6B34HFCOJHRIJRGT97WO3YXQT8KKUJ&origem=windows&refreshToken=5dcf41d7-d147-44fc-b24a-320e3f4c9cf3&dispositivo=P90GlBJku8WYGi8VkjEBGjbQtsUGMxqTqG1T6vkNv0oyfb9eI6fhck53FLsnMQpftveqTTuCYDDX2Sy8jWPP1Ff37Nr8lPalEtre','',' scrollbars=yes,menubar=no,width=500, resizable=yes,toolbar=no,location=yes,status=no')">Falar no chat Online <i class="fa fa-comments" aria-hidden="true"></i></a>
+<a href="whatsapp://send/?phone=552730620252&text=Olá, preciso acessar a seguinte pagina:%U%&source&data=%22" type="button" class="btn btn-outline-success">Falar ao Whatsapp <i class="fa fa-whatsapp"></i></a>
+<div id="content">
 <br>
 </div>
-
 <hr>
-<div id="footer">
-<p>Gerado %T por %h (%s)</p>
-<!-- %c -->
-</div>
-</body></html>
+</script>
+<script src="https://chat.api.milvus.com.br/apichat/widget/script/a4c24280/d4b43fe22034dfebf8b3f3ae565b121e2847407dad13433dd7f12793e6ba186363d5979af1b0f99f2634715f2be03f94aeb647e27aec95916d72f84b70ffd8134710f7080a91ef9ca51695a28ee5837b9486d91baea7cd611b6c0ee76ce995b3b505130082"></script>
+</body>
+
+</html>
