@@ -220,103 +220,48 @@ function get_error_page($er_code_id, $err_msg='') {
  
  
              
-    $str[] = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html> <head> 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        </head>
-             <body> 
-             <title> GSF - Grupo Sopro Firewall </title>
-  <div class="jumbotron" align="center">
-        <div class="container" align ="center">
-<img align="top" src="http://suporte.gruposopro.com.br/scp/logo.php?1505139886"</img>
+    $str[] = '<html>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
+<head>
+<meta type="copyright" content="Copyright (C) 1996-2017 The Squid Software Foundation and contributors">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Erro</title>
+<style>
+      body  {
+        background-image: url("https://i.imgur.com/NCJ6Xz9.jpg");
+        background-color: #cccccc;
+        background-repeat: no-repeat;
+        background-position: 60% 10%;
+        background-size: 100%, 95%, 35%;
+      }
+      </style>
+</head><body id="%c">
+<div id="titles">
+<div class="jumbotron">
+<h1 class="display-4" style="color:red;" >'.$cl['t'].' Bloqueado!</h1>
+<p class="lead">Voce tentou acessar: '.$cl['u'].'</p>
+<p> O seu ip e : '.$cl['a'].'</p> 
+<blockquote id="error">
+  <p> Motivo do Bloqueio : '.$cl['t'].'</p>
+</blockquote>
+
+<hr class="my-4">
+
+<a  type="button" class="btn btn-outline-secondary" href="#" onclick="">Falar no chat Online <i class="fa fa-comments" aria-hidden="true"></i></a>
+
+<a href="whatsapp://send/?phone=552730620252&text=OlÃ¡, preciso acessar a seguinte pagina:%U%&source&data=%22" type="button" class="btn btn-outline-success">Falar ao Whatsapp <i class="fa fa-whatsapp"></i></a>
+<div id="content">
+  
+<br>
 </div>
-      <h1 style="color:red;">Acesso negado!</h1>
-        <p style="color:red;" > Você tentou acessar : '.$cl['u'].'</p>
-          <p> Motivo do Bloqueio : '.$cl['t'].'</p>
-               <p> O seu ip é: '.$cl['a'].'</p> 
-    <a class="btn btn-success" href="mailto:suporte@gruposopro.com.br?subject=Liberar%20Acesso&body=OlÃ¡, %0D%0AMeu dispositivo Ã©:%20%0A%20'.$cl['n'].'%20%0D%0A%20 %20%0D%0A%20 %0D%0A%20Quero liberar o seguinte site: '.$cl['u'].' ">Requisitar acesso</a>    
-             </button>
+<hr>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Enviar solicitação</button>
+</script>
+<script src="https://chat.api.milvus.com.br/apichat/widget/script/a4c24280/d4b43fe22034dfebf8b3f3ae565b121e2847407dad13433dd7f12793e6ba186363d5979af1b0f99f2634715f2be03f94aeb647e27aec95916d72f84b70ffd8134710f7080a91ef9ca51695a28ee5837b9486d91baea7cd611b6c0ee76ce995b3b505130082"></script>
+</body>
 
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Solicitar acesso</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="example@email.net"
-  action="https://script.google.com/macros/s/AKfycbxvbpWFIMJZ4kpXRH5sS4LfY9SW1_sIFdpT9XInB9MwNjxKHdQ/exec">
-    <!-- change the form action to your script url -->
-
-          
-<div class="form-group">
-            <label for="name" class="form-control-label">Nome:</label>
-            <input type="text" id="name" name="name" class="form-control" >
-          </div>
-
-          <div class="form-group">
-            <label for="message" class="form-control-label">Message:</label>
-            <textarea class="form-control" id="message" name="message""></textarea> 
-          </div>
-
-    <div class="class="form-control-label">
-      <label for="email">Email:</label>
-      <input type="text" id="email" name="email" type="email" class="form-control" value=""
-      required placeholder=""/>
-      <span id="email-invalid" style="display:none">
-         Digite um endereço válido!</span>
-    </div>
-
-    <fieldset disabled>
-    <label for="color" class="form-control-label" >Site: </label>
-            <input type="text" id="color" name="color" value="'.$cl['u'].'" class="form-control" >
-</fieldset>
-
-   
-           
-  <!-- Submit the Form to Google Using "AJAX" -->
-  <script data-cfasync="false" type="text/javascript"
-  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
-
-      </div>
-      <div class="modal-footer">
-
-     
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-         <button class="btn btn-success">
-      <i class="fa fa-paper-plane"></i>Enviar
-      </div>
-    </div>
-
-  </form>
-
-        </form>
-  </div>
-</div>
-
-
-
-   
-
- 
-
-  </form>
-
-             
-</div>  
-
-    </body>
-        </html> 
-              ';
+</html>';
  
         return implode("\n", $str);
 }
